@@ -13,9 +13,9 @@ class AuthController extends Controller
         $data['title'] = "Login E-Learning";
 
         return
-            view('auth.header', $data) .
+            view('header', $data) .
             view('auth.login', $data) .
-            view('auth.footer', $data);
+            view('footer', $data);
     }
 
     public function login_auth(Request $req)
