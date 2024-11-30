@@ -1,16 +1,15 @@
 <!-- Login -->
-<div class="container-fluid">
+<div class="section-full">
     <div class="container d-grid d-md-flex p-4 p-md-0 position-relative" style="margin-top: 50px">
         <div class="w-100">
             <div class="d-none d-lg-block">
-                <img src="<?= asset('assets/img/about.jpg') ?>"
+                {{-- <img src="<?= asset('assets/img/about.jpg') ?>"
+                    class="float-end d-block img-fluid rounded-5 rounded-start h-auto "> --}}
+                <img src="https://wallpapercave.com/wp/wp7113786.jpg" style="max-height: 80vh"
                     class="float-end d-block img-fluid rounded-5 rounded-start h-auto ">
             </div>
             <div class="col-12 col-lg-6 h-100 p-4 pe-5 bg-white rounded-5 position-absolute" id="formLogin">
                 <div class="d-flex ps-md-4 flex-column justify-content-center h-100">
-                    {{--
-                        msg error
-                    --}}
                     <h4 class="ps-1 fw-semibold">Login</h4>
                     <form class="fw-normal" action="<?= url('login/authentication') ?>" method="POST">
                         @csrf
@@ -20,7 +19,7 @@
                                 id="exampleInputEmail1" name="email" placeholder="Email" aria-describedby="emailHelp"
                                 required>
                         </div>
-                        <div class="input-group my-4">
+                        <div class="float-label-control my-4">
                             <input type="password"
                                 class="form-control input-text woocommerce-Input woocommerce-Input--text"
                                 name="password" id="exampleInputPassword1" placeholder="Password"
@@ -28,9 +27,6 @@
                             <span class="align-self-center fw-semibold" id="togglePassword"
                                 style="cursor: pointer;margin-left: -46px;z-index: 5;padding: 10px;"><i
                                     class="far fa-eye fs-4"></i></span>
-                        </div>
-                        <div class="mt-4 my-3">
-                            <div class="g-recaptcha" data-sitekey="6LfZlSETAAAAAC5VW4R4tQP8Am_to4bM3dddxkEt"></div>
                         </div>
                         <div class="mt-3 my-3">
                             <a href="<?= url('forgot-password') ?>"

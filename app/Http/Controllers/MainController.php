@@ -11,6 +11,8 @@ class MainController extends Controller
         $data['title'] = "E-Learning";
 
         return
-            view('home', $data);
+            view('header', $data) .
+            view('home', $data) .
+            view('footer');
     }
 }

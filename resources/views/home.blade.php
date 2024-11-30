@@ -1,122 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title><?= $title ?></title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicon -->
-    <link href="{{ asset('assets') }}/img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="{{ asset('assets') }}/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="{{ asset('assets') }}/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{ asset('assets') }}/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="{{ asset('assets') }}/css/style.css" rel="stylesheet">
-</head>
-
-<body>
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Please Wait...</span>
-        </div>
-    </div>
-    <!-- Spinner End -->
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        {{-- Brand Home Logo --}}
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>E-Learning</h2>
-        </a>
-        {{-- Other Logo --}}
-        <a href="" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><img src="" alt="LOGO"></h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Other Page</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="#" class="dropdown-item">E-Learning</a>
-                        <a href="#" class="dropdown-item">Other Page</a>
-                        <a href="#" class="dropdown-item">Other Page</a>
+<!-- Mashead header-->
+<header class="masthead">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+                <!-- Mashead text and app badges-->
+                <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                    <h1 class="display-1 lh-1 mb-3">Showcase your app beautifully.</h1>
+                    <p class="lead fw-normal text-muted mb-5">Launch your mobile app landing page faster with this
+                        free, open source theme from Start Bootstrap!</p>
+                    <div class="d-flex flex-column flex-lg-row align-items-center">
+                        <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge"
+                                src="assets/img/google-play-badge.svg" alt="..." /></a>
+                        <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg"
+                                alt="..." /></a>
                     </div>
                 </div>
             </div>
-            <a href="login" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Log In<i
-                    class="fa fa-arrow-right ms-3"></i></a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5">
-        <div class="owl-carousel header-carousel position-relative">
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="{{ asset('assets') }}/img/carousel-1.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style="background: rgba(24, 29, 56, .7);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses
-                                </h5>
-                                <h1 class="display-3 text-white animated slideInDown">The Best Online Learning Platform
-                                </h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed
-                                    stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus
-                                    eirmod elitr.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read
-                                    More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join
-                                    Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="{{ asset('assets') }}/img/carousel-2.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style="background: rgba(24, 29, 56, .7);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-sm-10 col-lg-8">
-                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses
-                                </h5>
-                                <h1 class="display-3 text-white animated slideInDown">Get Educated Online From Your Home
-                                </h1>
-                                <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed
-                                    stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus
-                                    eirmod elitr.</p>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read
-                                    More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join
-                                    Now</a>
+            <div class="col-lg-6">
+                <!-- Masthead device mockup feature-->
+                <div class="masthead-device-mockup">
+                    <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="circleGradient" gradientTransform="rotate(45)">
+                                <stop class="gradient-start-color" offset="0%"></stop>
+                                <stop class="gradient-end-color" offset="100%"></stop>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="50"></circle>
+                    </svg><svg class="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03"
+                            transform="translate(120.42 -49.88) rotate(45)"></rect>
+                        <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03"
+                            transform="translate(-49.88 120.42) rotate(-45)"></rect>
+                    </svg><svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50"></circle>
+                    </svg>
+                    <div class="device-wrapper">
+                        <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+                            <div class="screen bg-black">
+                                <!-- PUT CONTENTS HERE:-->
+                                <!-- * * This can be a video, image, or just about anything else.-->
+                                <!-- * * Set the max width of your media to 100% and the height to-->
+                                <!-- * * 100% like the demo example below.-->
+                                <video muted="muted" autoplay="" loop=""
+                                    style="max-width: 100%; height: 100%">
+                                    <source src="assets/img/demo-screen.mp4" type="video/mp4" />
+                                </video>
                             </div>
                         </div>
                     </div>
@@ -124,138 +55,151 @@
             </div>
         </div>
     </div>
-    <!-- Carousel End -->
+</header>
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h5 class="mb-3">Skilled Instructors</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+<!-- Quote/testimonial aside-->
+{{-- <aside class="text-center bg-gradient-primary-to-secondary">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-xl-8">
+                <div class="h2 fs-1 text-white mb-4">"An intuitive solution to a common problem that we all face,
+                    wrapped up in a single app!"</div>
+                <img src="assets/img/tnw-logo.svg" alt="..." style="height: 3rem" />
+            </div>
+        </div>
+    </div>
+</aside> --}}
+
+<!-- App features section-->
+<section id="features">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-8 order-lg-1 mb-5 mb-lg-0">
+                <div class="container-fluid px-5">
+                    <div class="row gx-5">
+                        <div class="col-md-6 mb-5">
+                            <!-- Feature item-->
+                            <div class="text-center">
+                                <i class="bi-phone icon-feature text-gradient d-block mb-3"></i>
+                                <h3 class="font-alt">Device Mockups</h3>
+                                <p class="text-muted mb-0">Ready to use HTML/CSS device mockups, no Photoshop
+                                    required!</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-5">
+                            <!-- Feature item-->
+                            <div class="text-center">
+                                <i class="bi-camera icon-feature text-gradient d-block mb-3"></i>
+                                <h3 class="font-alt">Flexible Use</h3>
+                                <p class="text-muted mb-0">Put an image, video, animation, or anything else in the
+                                    screen!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-5 mb-md-0">
+                            <!-- Feature item-->
+                            <div class="text-center">
+                                <i class="bi-gift icon-feature text-gradient d-block mb-3"></i>
+                                <h3 class="font-alt">Free to Use</h3>
+                                <p class="text-muted mb-0">As always, this theme is free to download and use for
+                                    any purpose!</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Feature item-->
+                            <div class="text-center">
+                                <i class="bi-patch-check icon-feature text-gradient d-block mb-3"></i>
+                                <h3 class="font-alt">Open Source</h3>
+                                <p class="text-muted mb-0">Since this theme is MIT licensed, you can use it
+                                    commercially!</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5 class="mb-3">Online Classes</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
-                            <h5 class="mb-3">Home Projects</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
-                            <h5 class="mb-3">Book Library</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+            </div>
+            <div class="col-lg-4 order-lg-0">
+                <!-- Features section device mockup-->
+                <div class="features-device-mockup">
+                    <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="circleGradient" gradientTransform="rotate(45)">
+                                <stop class="gradient-start-color" offset="0%"></stop>
+                                <stop class="gradient-end-color" offset="100%"></stop>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="50"></circle>
+                    </svg><svg class="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03"
+                            transform="translate(120.42 -49.88) rotate(45)"></rect>
+                        <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03"
+                            transform="translate(-49.88 120.42) rotate(-45)"></rect>
+                    </svg><svg class="shape-2 d-none d-sm-block" viewBox="0 0 100 100"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50"></circle>
+                    </svg>
+                    <div class="device-wrapper">
+                        <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+                            <div class="screen bg-black">
+                                <!-- PUT CONTENTS HERE:-->
+                                <!-- * * This can be a video, image, or just about anything else.-->
+                                <!-- * * Set the max width of your media to 100% and the height to-->
+                                <!-- * * 100% like the demo example below.-->
+                                <video muted="muted" autoplay="" loop=""
+                                    style="max-width: 100%; height: 100%">
+                                    <source src="assets/img/demo-screen.mp4" type="video/mp4" />
+                                </video>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Service End -->
+</section>
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">FAQs & Help</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Gallery</h4><a href="">See All</a>
-                    <div class="row g-2 pt-2">
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="{{ asset('assets') }}/img/course-1.jpg"
-                                alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="{{ asset('assets') }}/img/course-2.jpg"
-                                alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="{{ asset('assets') }}/img/course-3.jpg"
-                                alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="{{ asset('assets') }}/img/course-2.jpg"
-                                alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="{{ asset('assets') }}/img/course-3.jpg"
-                                alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="{{ asset('assets') }}/img/course-1.jpg"
-                                alt="">
-                        </div>
-                    </div>
-                </div>
+<!-- Basic features section-->
+<section class="bg-light">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+            <div class="col-12 col-lg-5">
+                <h2 class="display-4 lh-1 mb-4">Enter a new age of web design</h2>
+                <p class="lead fw-normal text-muted mb-5 mb-lg-0">This section is perfect for featuring some
+                    information about your application, why it was built, the problem it solves, or anything else!
+                    There's plenty of space for text here, so don't worry about writing too much.</p>
             </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">E-Learning</a>, All Right Reserved.
-
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://github.com/KepomPong2816">KepomPong2816</a>
-                    </div>
-                </div>
+            <div class="col-sm-8 col-md-6">
+                <div class="px-5 px-sm-0"><img class="img-fluid rounded-circle"
+                        src="https://source.unsplash.com/u8Jn2rzYIps/900x900" alt="..." /></div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+</section>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+<!-- Call to action section-->
+<section class="cta">
+    <div class="cta-content">
+        <div class="container px-5">
+            <h2 class="text-white display-1 lh-1 mb-4">
+                Stop waiting.
+                <br />
+                Start building.
+            </h2>
+            <a class="btn btn-outline-light py-3 px-4 rounded-pill" href="https://startbootstrap.com/theme/new-age"
+                target="_blank">Download for free</a>
+        </div>
+    </div>
+</section>
+<!-- App badge section-->
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('assets') }}/lib/wow/wow.min.js"></script>
-    <script src="{{ asset('assets') }}/lib/easing/easing.min.js"></script>
-    <script src="{{ asset('assets') }}/lib/waypoints/waypoints.min.js"></script>
-    <script src="{{ asset('assets') }}/lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="{{ asset('assets') }}/js/main.js"></script>
-</body>
-
-</html>
+{{-- <section class="bg-gradient-primary-to-secondary" id="download">
+    <div class="container px-5">
+        <h2 class="text-center text-white font-alt mb-4">Get the app now!</h2>
+        <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+            <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge"
+                    src="assets/img/google-play-badge.svg" alt="..." /></a>
+            <a href="#!"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
+        </div>
+    </div>
+</section> --}}
