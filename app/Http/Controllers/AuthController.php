@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
@@ -20,28 +21,50 @@ class AuthController extends Controller
 
     public function login_auth(Request $req)
     {
-        $data['title'] = "MEH";
+        $check_email = DB::selectOne("
+            SELECT
+                ma.*
+            FROM
+                md_auth ma
+            WHERE
+                ma.EMAIL = '" . $req->input('email') . "'
+        ");
 
         $auth = DB::selectOne("
             SELECT
-                md_auth.*
+                ma.*
             FROM
-                md_auth
+                md_auth ma
             WHERE
-                md_auth.EMAIL = '" . $req->input('email') . "'
+                ma.EMAIL = '" . $req->input('email') . "'
             AND
-                md_auth.PASSWORD = '" . hash('sha256', md5($req->input('password'))) . "'
+                ma.PASSWORD = '" . hash('sha256', md5($req->input('password'))) . "'
         ");
 
-        return
-            view('template_admin.header', $data) .
-            view('template_admin.sidebar', $data) .
-            // view('auth.login', $data) .
-            view('template_admin.dashboard') ;
-            // view('auth.footer', $data);
-            // view('template_main.header', $data) .
-            // view('template_main.footer');
+        if (!empty($check_email)) {
+            if (!empty($auth)) {
+                $user_data = collect([
+                    'KODE_USER' => $auth->KODE_USER,
+                    'EMAIL' => $auth->EMAIL,
+                    'ROLE' => $auth->ROLE,
+                    'IS_COC' => $auth->IS_COC,
+                    'IS_EVENT' => $auth->IS_EVENT,
+                    'KODE_PENDAFTARAN' => null,
+                    'NAME' => $auth->NAMA,
+                    'HP' => $auth->NO_TELP
+                ]);
+                Session::push('user', $user_data);
+
+                return redirect('/dashboard');
+            }
+        } else {
+            return redirect('/login')->with('msg', 'Email tidak terdaftar');
+        }
     }
 
-
+    public function logout()
+    {
+        Session::flush();
+        return redirect('/');
+    }
 }

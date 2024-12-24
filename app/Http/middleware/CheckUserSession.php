@@ -15,14 +15,10 @@ class CheckUserSession
      */
     public function handle(Request $request, Closure $next, ...$role)
     {
-        if (!$request->session()->exists('user')) {
-            return redirect('')->with('resp_msg', 'Your session has been expired');
-        } else {
-            if (in_array(session('user')[0]['ROLE'], $role)) {
-                return $next($request);
-            } else {
-                return redirect('');
-            }
+        if ($request->session()->get('ID_ROLE') != $role) {
+            return redirect('/login')->with('msg', 'Your session has expired');
         }
+
+        return $next($request);
     }
 }
