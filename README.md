@@ -1,3 +1,30 @@
+## E-Learning
+
+The E-Learning application project aims to facilitate interaction between students and teachers in online learning. This application offers various features, such as virtual classes via video conferencing, assignment submission, storage of learning materials, academic calendars, online quizzes and exams, and discussion forums. Security measures like authentication and data encryption are implemented to protect user data. This application is expected to enhance accessibility, efficiency, and collaboration in the online teaching and learning process.
+
+## Features
+- Payment
+- Add materials and Quiz for teacher
+- Learning materials, descriptions and references
+- Quiz
+- and more...
+
+## Contributing
+
+1. [Fork the repository](https://github.com/KepomPong2816/E-Learning)!
+2. Clone your fork: `git clone https://github.com/your-username/e-learning-vscode.git`
+3. Create your feature branch: `git checkout -b my-new-feature`
+4. Commit your changes: `git commit -am 'Add some feature'`
+5. Push to the branch: `git push origin my-new-feature`
+6. Submit a pull request :D
+
+## Author
+
+**E-Learning** © [KepomPong2816](https://github.com/KepomPong2816).  
+Authored and maintained by KepomPong2816.
+
+> GitHub [KepomPong2816](https://github.com/KepomPong2816).  
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">

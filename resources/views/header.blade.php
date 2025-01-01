@@ -63,30 +63,20 @@
                 <nav id="navmenu" class="navmenu">
                     <ul>
                         {{-- <li><a href="#hero" class="active">Home<br></a></li> --}}
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#team">Team</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        {{-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i
+                        <li><a href="">Announcement</a></li>
+                        <li><a href="">Lecturer</a></li>
+                        <li class="dropdown"><a href="#"><span>Curriculum</span> <i
                                     class="bi bi-chevron-down toggle-dropdown"></i></a>
                             <ul>
-                                <li><a href="#">Dropdown 1</a></li>
-                                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
+                                <li class="dropdown"><a href="#"><span>2019</span> <i
                                             class="bi bi-chevron-down toggle-dropdown"></i></a>
                                     <ul>
-                                        <li><a href="#">Deep Dropdown 1</a></li>
-                                        <li><a href="#">Deep Dropdown 2</a></li>
-                                        <li><a href="#">Deep Dropdown 3</a></li>
-                                        <li><a href="#">Deep Dropdown 4</a></li>
-                                        <li><a href="#">Deep Dropdown 5</a></li>
+                                        <li><a href="#">Major 1</a></li>
+                                        <li><a href="#">Major 2</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Dropdown 2</a></li>
-                                <li><a href="#">Dropdown 3</a></li>
-                                <li><a href="#">Dropdown 4</a></li>
                             </ul>
-                        </li> --}}
+                        </li>
                         <li><a href="{{ url('login') }}"><button class="btn btn-primary">Login</button></a></li>
                     </ul>
                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
